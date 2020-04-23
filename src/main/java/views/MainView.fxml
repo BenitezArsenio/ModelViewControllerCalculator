@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<TitledPane fx:id="quit" collapsible="false" prefHeight="300.0" prefWidth="300.0" text="Number Adder" textAlignment="RIGHT" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.MainController">
+<TitledPane fx:id="quit" collapsible="false" prefHeight="300.0" prefWidth="300.0" text="Number Adder" textAlignment="RIGHT" xmlns="http://javafx.com/javafx/8.0.251" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.MainController">
    <content>
       <BorderPane prefHeight="200.0" prefWidth="200.0">
          <top>
