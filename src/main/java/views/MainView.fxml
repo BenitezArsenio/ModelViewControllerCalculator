@@ -1,50 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.RowConstraints?>
 
-<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.MainController">
-   <top>
-      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <TextArea fx:id="sumDisplay" editable="false" prefHeight="200.0" prefWidth="400.0" promptText="SUM">
-               <HBox.margin>
-                  <Insets left="100.0" />
-               </HBox.margin>
-               <cursor>
-                  <Cursor fx:constant="DISAPPEAR" />
-               </cursor>
-            </TextArea>
-         </children>
-      </HBox>
-   </top>
-   <right>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
-   </right>
-   <center>
-      <HBox prefHeight="200.0" prefWidth="400.0" BorderPane.alignment="CENTER">
-         <children>
-            <TextField fx:id="num1" alignment="CENTER" promptText="Enter a number ">
-               <HBox.margin>
-                  <Insets left="100.0" />
-               </HBox.margin>
-            </TextField>
-            <TextField fx:id="num2" alignment="CENTER" layoutX="110.0" layoutY="10.0" promptText="Enter a number">
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
-            </TextField>
-            <Button mnemonicParsing="false" onAction="#onClickAdd" prefHeight="33.0" prefWidth="101.0" text="+" />
-         </children>
-         <BorderPane.margin>
-            <Insets />
-         </BorderPane.margin>
-      </HBox>
-   </center>
-</BorderPane>
+<TitledPane fx:id="quit" collapsible="false" prefHeight="300.0" prefWidth="300.0" text="Number Adder" textAlignment="RIGHT" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.MainController">
+   <content>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextArea fx:id="screen" editable="false" prefHeight="100.0" prefWidth="579.0" promptText="SUM" />
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <GridPane BorderPane.alignment="CENTER">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="one" mnemonicParsing="false" onAction="#clickOne" prefWidth="50.0" text="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Button fx:id="two" mnemonicParsing="false" onAction="#clickTwo" prefWidth="50.0" text="2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Button fx:id="three" mnemonicParsing="false" onAction="#clickThree" prefWidth="50.0" text="3" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                  <Button fx:id="equals" mnemonicParsing="false" onAction="#clickEquals" prefWidth="55.0" text="=" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
+                  <Button fx:id="four" mnemonicParsing="false" onAction="#clickFour" prefWidth="50.0" text="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button fx:id="five" mnemonicParsing="false" onAction="#clickFive" prefWidth="50.0" text="5" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button fx:id="six" mnemonicParsing="false" onAction="#clickSix" prefWidth="50.0" text="6" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button fx:id="plus" mnemonicParsing="false" onAction="#clickPlus" prefWidth="55.0" text="+" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button fx:id="seven" mnemonicParsing="false" onAction="#clickSeven" prefWidth="50.0" text="7" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <Button fx:id="eight" mnemonicParsing="false" onAction="#clickEight" prefWidth="50.0" text="8" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <Button fx:id="nine" mnemonicParsing="false" onAction="#clickNine" prefWidth="50.0" text="9" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <Button fx:id="zero" mnemonicParsing="false" onAction="#clickZero" prefWidth="55.0" text="0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </content>
+</TitledPane>

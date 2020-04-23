@@ -1,42 +1,125 @@
 package views;
 
-import javafx.fxml.*;
-import model.NumberAdder;
-import model.ViewTransitionModelInterface;
-import javafx.event.*;
+
+	import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+	import javafx.scene.control.Button;
+	import javafx.scene.control.TextArea;
+	import javafx.scene.control.TitledPane;
+import model.ViewTransitionalModelInterface;
+
 
 public class MainController {
-
-	ViewTransitionModelInterface model;
-	NumberAdder adder;
 	
-	public void setModel(ViewTransitionModelInterface newModel)
-	{
-		model = newModel;
-	}
-	@FXML
-    private TextArea sumDisplay;
+		ViewTransitionalModelInterface model;
+		
+		void setModel(ViewTransitionalModelInterface newModel)
+		{
+			model=newModel;
+		}
+	    @FXML
+	    private TitledPane quit;
 
-    @FXML
-    private TextField num1;
+	    @FXML
+	    private TextArea screen;
 
-    @FXML
-    private TextField num2;
+	    @FXML
+	    private Button one;
 
-  
-    @FXML
-    void onClickAdd(ActionEvent event) 
-    {
-    	adder.setNumber1(num1);
-    	adder.setNumber2(num2);
-    	
-    	System.out.println("add clicked");
-    }
+	    @FXML
+	    private Button two;
 
+	    @FXML
+	    private Button three;
 
+	    @FXML
+	    private Button equals;
+
+	    @FXML
+	    private Button four;
+
+	    @FXML
+	    private Button five;
+
+	    @FXML
+	    private Button six;
+
+	    @FXML
+	    private Button plus;
+
+	    @FXML
+	    private Button seven;
+
+	    @FXML
+	    private Button eight;
+
+	    @FXML
+	    private Button nine;
+
+	    @FXML
+	    private Button zero;
+
+	    @FXML
+	    void clickEight(ActionEvent event) {
+
+	    }
+
+	    @FXML
+	    void clickEquals(ActionEvent event) {
+
+	    }
+
+	    @FXML
+	    void clickFive(ActionEvent event) {
+
+	    }
+
+	    @FXML
+	    void clickFour(ActionEvent event) {
+
+	    }
+
+	    @FXML
+	    void clickNine(ActionEvent event) {
+
+	    }
+
+	    @FXML
+	    void clickOne(ActionEvent event) {
+
+	    }
+
+	    @FXML
+	    void clickPlus(ActionEvent event) {
+
+	    }
+
+	    @FXML
+	    void clickSeven(ActionEvent event) {
+
+	    }
+
+	    @FXML
+	    void clickSix(ActionEvent event) {
+
+	    }
+
+	    @FXML
+	    void clickThree(ActionEvent event) {
+
+	    }
+
+	    @FXML
+	    void clickTwo(ActionEvent event) {
+
+	    }
+
+	    @FXML
+	    void clickZero(ActionEvent event) {
+
+	    }
+
+	
 
 
 }

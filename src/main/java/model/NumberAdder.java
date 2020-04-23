@@ -1,33 +1,40 @@
 package model;
 
-import javafx.scene.control.TextField;
+import javafx.beans.binding.DoubleBinding;
+import javafx.beans.property.DoubleProperty;
+import javafx.beans.property.SimpleDoubleProperty;
 
 public class NumberAdder {
 	
-	TextField number1;
-	TextField number2;
-	
+	DoubleProperty number1 = new SimpleDoubleProperty();
+	DoubleProperty number2 = new SimpleDoubleProperty();
+	 
 	public NumberAdder()
 	{
 		
 	}
 
-	public TextField getNumber1() {
+	public DoubleProperty getNumber1() {
 		return number1;
 	}
 
-	public void setNumber1(TextField num1) {
+	public void setNumber1(DoubleProperty num1) {
 		this.number1 = num1;
 	}
 
-	public TextField getNumber2() {
+	public DoubleProperty getNumber2() {
 		return number2;
 	}
 
-	public void setNumber2(TextField num2) {
+	public void setNumber2(DoubleProperty num2) {
 		this.number2 = num2;
 	}
 	
+	public DoubleBinding add()
+	{
+		DoubleBinding sum = number1.add(number2);
+		return sum;
+	}
 	
 	
 

@@ -1,10 +1,13 @@
-import javafx.application.*;
+
+import javafx.application.Application;
+
 import javafx.fxml.*;
 import javafx.stage.*;
-import model.ViewTransitionalModel;
 import views.MainController;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.*;
+import javafx.scene.control.TitledPane;
+import javafx.scene.layout.BorderPane;
+
 
 public class Main extends Application {
 	
@@ -14,14 +17,14 @@ public class Main extends Application {
 		
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Main.class.getResource("views/MainView.fxml"));
-		BorderPane view = loader.load();
-		MainController controller = loader.getController();
-		ViewTransitionalModel vm = new ViewTransitionalModel(view);
-		controller.setModel(vm);
+		TitledPane view = loader.load();
+	
+		MainController cont = loader.getController();
 		Scene s = new Scene(view);
 		stage.setScene(s);
 		stage.show();
 	}
+	
 	public static void main(String[] args)
 	{
 		launch(args);
